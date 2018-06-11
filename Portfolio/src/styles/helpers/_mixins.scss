@@ -1,0 +1,123 @@
+//Headings
+@mixin headings($h1: 42px, $decreaseBy: 6px) {
+   @for $i from 1 through 6 {
+      h#{$i} {
+         font-size: ($h1+$decreaseBy) - $i * $decreaseBy;
+      }
+   }
+}
+
+//Box Shadow Mixins
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+// Transform
+@mixin transform($transforms) {
+  @each $prefix in $prefixes {
+    #{$prefix}-transform: $transforms;
+  }
+  transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+// scale
+@mixin scale($x, $y) {
+	 @include transform(scale($x, $y));
+}
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+  @each $prefix in $prefixes {
+    #{$prefix}-transform-origin: $origin;
+  }
+  transform-origin: $origin;
+}
+//animation
+@mixin animation ($animation) {
+  @each $prefix in $prefixes {
+    #{$prefix}-animation: $animation;
+  }
+  animation: $animation;
+}
+//animation duration
+@mixin animation-duration ($duration) {
+  @each $prefix in $prefixes {
+    #{$prefix}-animation-duration: $duration;
+  }
+  animation-duration: $duration;
+}
+//animation fill mode
+@mixin animation-fill-mode ($fill-mode) {
+  @each $prefix in $prefixes {
+    #{$prefix}-animation-fill-mode: $fill-mode;
+  }
+  animation-fill-mode: $fill-mode;
+}
+//animation name
+@mixin animation-name ($name) {
+  @each $prefix in $prefixes {
+    #{$prefix}-animation-name: $name;
+  }
+  animation-name: $name;
+}
+
+//Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+//Transition
+@mixin transition($transition...) {
+  @each $prefix in $prefixes {
+    #{$prefix}-transition: $transition;
+  }
+  transition: $transition;
+}
+@mixin transition-property($property...) {
+  @each $prefix in $prefixes {
+    #{$prefix}-transition-property: $property;
+  }
+  transition-property: $property;
+}
+@mixin transition-duration($duration...) {
+    @each $prefix in $prefixes {
+      #{$prefix}-transition-property: $duration;
+    }
+    transition-property: $duration;
+}
+@mixin transition-timing-function($timing...) {
+    @each $prefix in $prefixes {
+      #{$prefix}-transition-timing-function: $timing;
+    }
+    transition-timing-function: $timing;
+}
+@mixin transition-delay($delay...) {
+    @each $prefix in $prefixes {
+      #{$prefix}-webkit-transition-delay: $delay;
+    }
+    transition-delay: $delay;
+}
+//Box shadow
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}

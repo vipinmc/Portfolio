@@ -1,0 +1,27 @@
+
+//Fonts
+$portal_font: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+$base_font_size: 16px;
+$helvetica_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+//Colors
+$white: #FFFFFF;
+$black: #000000;
+$light_gray: #CCCCCC;
+$gray_f5: #F5F5F5;
+$light_gray_97: #979797;
+$gray_border: #b0b0b0;
+
+// rgba
+$black_03: rgba(0,0,0,0.3);
+$black_02: rgba(0, 0, 0, 0.2);
+
+//Prefixes
+$prefixes:      ("-webkit", "-moz", "-ms", "-o",  "");
+
+//Devices
+$devices: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;

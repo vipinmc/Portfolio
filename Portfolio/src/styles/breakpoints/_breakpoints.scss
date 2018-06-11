@@ -1,0 +1,18 @@
+
+/// Mixin to manage responsive breakpoints
+/// @require $devices
+@mixin breakpoints($device) {
+  // If the key exists in the map
+  @if map-has-key($devices, $device) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($devices, $device)) {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$device}`. "
+        + "Available breakpoints are: #{map-keys($devices)}.";
+  }
+}

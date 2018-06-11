@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+@import "helpers/all";
+@import "breakpoints/breakpoints";
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+html,body {
+    margin:0;
+    padding:0;
+}
+body {
+    font-size: $base_font_size;
+    font-family: $portal_font;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+}
+input{
+    border: 1px solid $gray_border;
+    padding: 3px 5px 4px;
+    color: $light_gray_97;
+    width: 190px;
+}
+address,caption,cite,code,dfn,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+
+@include headings(3em, 0.45em);
+
+// Scrollbar
+*::-webkit-scrollbar{
+    width: 6px;
+	background-color: $gray_f5;
+    &-track {
+        -webkit-box-shadow: inset 0 0 6px $black_03;
+        background-color: $gray_f5;
+    }
+    &-thumb {
+        background-color: $black;
+    }
+}
+
+// Styles common
+.sp {
+    &-heading-wrapper {
+        padding: 1em;
+        border: 1px solid $black;
+        &.combined-header {
+            margin-left: -30px; // To combine the heading border
+            padding-left: 30px;
+            border-left: 0;
+            @include breakpoints(small) {
+                border-left: 1px solid $black;
+                margin-left: 0;
+                margin-top: 1em;
+            }
+        }
+    }
+    &-info-btn, &-footer-btn {
+        cursor: pointer;
+    }
+    &-modal-open {
+        display: block;
+    }
+    &-btn-wrapper {
+        display: none;
+        &.opened {
+            display: inline-block;
+        }
+    }
+}
+
+@include breakpoints(medium) {
+    @include headings(2em, 0.45em);
+}
