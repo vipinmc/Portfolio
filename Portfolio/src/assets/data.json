@@ -2,58 +2,58 @@
   {
     "name": "Vipin M C",
     "job": "UI Developer",
-    "expertise": {
-        "html": {
-          "expertise": "Html",
-          "experience": "7"
-        },
-        "css": {
-          "expertise": "CSS",
-          "experience": "7"
-        },
-        "bootstrap": {
-          "expertise": "Bootstrap",
-          "experience": "7"
-        },
-        "jQuery": {
-          "expertise": "jQuery",
-          "experience": "6"
-        },
-        "javascript": {
-          "expertise": "javascript",
-          "experience": "6"
-        },
-        "scss": {
-          "expertise": "SCSS",
-          "experience": "6"
-        },
-        "less": {
-          "expertise": "LESS",
-          "experience": "2"
-        }
-    },
+    "expertise": [
+      {
+        "name": "Html",
+        "years": "7"
+      },
+      {
+        "name": "CSS",
+        "years": "7"
+      },
+      {
+        "name": "Bootstrap",
+        "years": "7"
+      },
+      {
+        "name": "jQuery",
+        "years": "6"
+      },
+      {
+        "name": "javascript",
+        "years": "6"
+      },
+      {
+        "name": "SCSS",
+        "years": "6"
+      },
+      {
+        "name": "LESS",
+        "years": "2"
+      }
+    ],
     "title": "Front-end UI Developer",
     "present": [
       {
         "company": "Emids Technologies",
-        "experience": "4 Years"
+        "experience": "4"
       }
     ],
     "past": [
       {
         "company": "Regalix India Pvt Ltd",
-        "experience": "10 Months"
+        "experience": "10"
       },
       {
         "company": "Nous Infosystems Pvt Ltd",
-        "experience": "1.1 years"
+        "experience": "1.1"
       },
       {
         "company": "Vertex Technosoft Pvt Ltd",
-        "experience": "2 years"
+        "experience": "2"
       }
     ],
-    "totalExperience": "7 Plus Years",
+    "totalExperience": "7",
     "description": "An all-round UI developer who has been developing portal websites UI over 7 years now. A whizz at Front-end UI Development looking for a fun team and exciting projects to work on.",
     "contact": [
       {
@@ -61,7 +61,12 @@
         "phone": "+91-8050907770",
         "social": [
           {
-            "linkedIn": "https://www.linkedin.com/in/vipin-m-c-13109169"
+            "media": "LinkedIn",
+            "link": "https://www.linkedin.com/in/vipin-m-c-13109169"
+          },
+          {
+            "media": "Twitter",
+            "link": "https://twitter.com/vipinmc08"
           }
         ]
       }
