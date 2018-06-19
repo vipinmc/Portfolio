@@ -1,22 +1,7 @@
-
 <div class="container">
-  <app-header [state]="hello" (event)="setDataFromChild($event)"></app-header>
-  <!--The content below is only a placeholder and can be replaced.-->
-  <div class="content-area">
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
-    <h2>
-      Parent(app) component {{hello}}
-    </h2>
-    <!-- Output -->
-    <h3>View from Child {{goodBye}}</h3>
-
-
-    <!-- ViewChild -->
-    <input type="text" #myInputText>
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>App Works</h3>
+    </div>
   </div>
-  <app-footer></app-footer>
 </div>
-<app-child [state]="hello"></app-child>
-
